@@ -1,0 +1,296 @@
+body{
+    font-family: 'Raleway', sans-serif;
+    background-color: #EAB035;
+}
+
+@each $tipo, $numero in $fonts{
+    .fuente-#{$tipo}{
+        font-weight: $numero
+    }
+}
+
+.navbar{
+    background-color: $color-repeat;
+}
+
+#logo{
+	display: flex;
+	width: 30%;
+	margin: 0.5rem;
+	padding: 7px;
+}
+
+ul{
+    padding-left: 9rem !important;
+}
+
+.list li{
+    display: inline-block;
+    margin-left: 1rem;
+	font-weight: 700;
+	height: 20px;
+}
+
+.item{
+	color: #EAB035;
+	font-weight: 700;
+	font-size: large;
+	text-align: center;
+	padding: 30px;
+    text-decoration: none;
+    &:hover{
+        color: white;
+    }
+}
+
+.dropdown-menu{
+    background-color: #EAB035;
+}
+
+.dropdown-item{
+    color: $color-repeat;
+    font-weight: 700;
+}
+
+.index{
+	font-weight: 500;
+	font-size: medium;
+	text-align: left;
+	color: $color-repeat;
+	margin: 3rem;
+	display: inline-block;
+}
+
+p{
+	font-weight: 700;
+	font-size: large;
+	text-align: center;
+	color: #D45023;
+	margin: 3rem;
+}
+
+.index__icon{
+	display: flex;
+	justify-content: center;
+	margin: 3rem;
+	max-width: 20px;
+}
+
+.index__foto{
+	display: inline-block;
+	width: 40%;
+	margin: 2rem;
+    &:hover{
+        transform: scale(1.2);
+    }
+}
+
+.index__txf{
+	display: inline-block;
+	width: 40%;
+	margin: 2rem;
+}
+
+.index__titulo{
+	font-weight: 900;
+	font-size: xx-large;
+	text-align: center;
+	color: #3A2820;
+	margin: 2rem;
+	display: block;
+    &::after{
+        content: '!!';
+    }
+}
+
+.datos{
+    display: flex;
+    justify-content: space-around;
+	background-color: #3A2820;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 6rem;
+}
+
+.estadistica{
+    width: 170px;
+    text-align: center;
+	display: flex;
+	justify-content: space-around;
+    padding: 2rem;
+    font-weight: 700;
+    font-size: x-large;
+	color: #D45023;
+    margin: 1rem 0rem 1.5rem 0rem;
+}
+
+.footer__titulo{
+	font-weight: 500;
+	font-size: large;
+	background-color: $color-repeat;
+	color: white;
+	text-align: center;
+	padding: 1rem;
+}
+
+.footer__info{
+	font-weight: 500;
+	font-size: medium;
+	text-align: center;
+	list-style-type: none;
+	padding: 5px;
+}
+
+.footer__icon{
+	max-width: 20px;
+}
+
+.footer__link{
+    color: #EAB035;
+    text-decoration: none;
+    &:hover{
+        color: #EC6A31;
+    }
+}
+
+@media all and (max-with: 768px){
+	.list li{
+		margin-left: 1rem;
+		height: 15px;
+	}
+	.estadistica{
+		width: 100px;
+	}
+}
+
+/*integrantes.html*/
+
+.integrantes__titulo{
+	font-weight: 900;
+	font-size: xx-large;
+	text-align: center;
+	color: $color-repeat;
+	margin: 2rem;
+	display: block;
+}
+
+.integrantes__titulo2{
+	font-weight: 900;
+	font-size: xx-large;
+	text-align: center;
+	color: #3A2820;
+	margin: 2rem;
+	display: block;
+}
+
+@mixin images($width) {
+    width: $width;
+}
+
+.integrantes__foto{
+	@include images(20%);
+	margin: 2rem;
+}
+
+.integrantes__discos{
+	@include images(20%);
+	margin: 2rem;
+}
+
+.integrantes__discos2{
+	@include images(30%);
+	margin: 2rem;
+}
+
+.integrantes__info{
+	font-weight: 500;
+    font-size: large;
+    text-align: left;
+    margin: 2rem;
+    display: block;
+	color: #3A2820;
+}
+
+.integrantes__info2{
+	font-weight: 500;
+    font-size: large;
+    text-align: left;
+    margin: 2rem;
+    display: block;
+	color: $color-repeat;
+}
+
+/*discografia.html*/
+
+.discografia__titulo{
+	font-weight: 900;
+	font-size: xx-large;
+	text-align: right;
+	color: #D45023;
+	margin: 2rem;
+	display: block;
+}
+
+.discografia__info{
+    font-weight: 500;
+    font-size: large;
+    text-align: left;
+    margin: 2rem;
+    display: block;
+	color: $color-repeat;
+}
+
+.discografia__foto{
+	display: inline-block;
+	width: 30%;
+	margin: 1.5rem;
+}
+
+/*giras.html*/
+
+.giras__titulo{
+	font-weight: 900;
+	font-size: xx-large;
+	text-align: center;
+	color: $color-repeat;
+	margin: 2rem;
+	display: block;
+}
+
+.giras__foto{
+	display: inline;
+	width: 40%;
+	margin: 2rem;
+}
+
+.giras__foto:hover{
+	transform: scale(1.2);
+}
+
+.giras__info{
+    font-weight: 500;
+    font-size: large;
+    text-align: left;
+    margin: 2rem;
+    display: block;
+	color: #D45023;
+}
+
+/*contacto.html*/
+
+.contact{
+	color: #3A2820;
+	margin: 2rem;
+	padding: 1rem;
+}
+
+textarea{
+	background-color: #D45023;
+	color: #3A2820;
+}
+
+input{
+	background-color: #3A2820;
+	color: #EAB035;
+	border-radius: 5px;
+}
